@@ -222,6 +222,60 @@ footer{background:#0d1a12;padding:64px 80px 40px;}
   </div>
   <div class="hero-gradient"></div>
   <div class="hero-gradient2"></div>
+  <!-- Faded EV charger with electric pulses -->
+  <svg style="position:absolute;right:5%;bottom:0;top:70px;height:100%;width:40%;z-index:1;opacity:0.12;pointer-events:none;" viewBox="0 0 400 800" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMaxYMax meet">
+    <defs>
+      <filter id="hglow"><feGaussianBlur stdDeviation="6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      <filter id="hglow2"><feGaussianBlur stdDeviation="12" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    </defs>
+    <!-- Charger body -->
+    <rect x="100" y="80" width="200" height="580" rx="18" fill="none" stroke="#7eb89a" stroke-width="2.5"/>
+    <rect x="115" y="100" width="170" height="140" rx="8" fill="none" stroke="#7eb89a" stroke-width="1.5"/>
+    <!-- Screen lines -->
+    <line x1="135" y1="130" x2="265" y2="130" stroke="#7eb89a" stroke-width="2" stroke-linecap="round"/>
+    <line x1="135" y1="152" x2="230" y2="152" stroke="#7eb89a" stroke-width="2" stroke-linecap="round"/>
+    <line x1="135" y1="174" x2="245" y2="174" stroke="#7eb89a" stroke-width="2" stroke-linecap="round"/>
+    <line x1="135" y1="196" x2="210" y2="196" stroke="#7eb89a" stroke-width="2" stroke-linecap="round"/>
+    <line x1="135" y1="218" x2="255" y2="218" stroke="#7eb89a" stroke-width="2" stroke-linecap="round"/>
+    <!-- Charge port -->
+    <rect x="150" y="320" width="100" height="60" rx="10" fill="none" stroke="#7eb89a" stroke-width="2"/>
+    <rect x="168" y="336" width="16" height="30" rx="3" fill="none" stroke="#7eb89a" stroke-width="2"/>
+    <rect x="216" y="336" width="16" height="30" rx="3" fill="none" stroke="#7eb89a" stroke-width="2"/>
+    <!-- Status light -->
+    <circle cx="340" cy="100" r="10" fill="none" stroke="#7eb89a" stroke-width="2"/>
+    <circle cx="340" cy="100" r="5" fill="#7eb89a" filter="url(#hglow)">
+      <animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Cable going down -->
+    <path d="M200,380 C200,450 160,500 140,580 C130,630 140,680 160,740 C170,770 185,790 200,800" fill="none" stroke="#7eb89a" stroke-width="3" stroke-linecap="round"/>
+    <!-- Electric pulses on cable -->
+    <circle r="6" fill="#7eb89a" filter="url(#hglow2)">
+      <animateMotion path="M200,380 C200,450 160,500 140,580 C130,630 140,680 160,740 C170,770 185,790 200,800" dur="2.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;0" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="4" fill="#fff">
+      <animateMotion path="M200,380 C200,450 160,500 140,580 C130,630 140,680 160,740 C170,770 185,790 200,800" dur="2.2s" begin="0.3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.8;0.8;0" dur="2.2s" begin="0.3s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Second pulse -->
+    <circle r="5" fill="#7eb89a" filter="url(#hglow)">
+      <animateMotion path="M200,380 C200,450 160,500 140,580 C130,630 140,680 160,740 C170,770 185,790 200,800" dur="2.2s" begin="1.1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.9;0.9;0" dur="2.2s" begin="1.1s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Lightning bolt -->
+    <path d="M185,420 L210,460 L195,460 L220,500 L190,500 L215,540" fill="none" stroke="#7eb89a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" filter="url(#hglow)">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="1.5s" repeatCount="indefinite"/>
+    </path>
+    <!-- Ambient glow rings -->
+    <circle cx="200" cy="350" r="50" fill="none" stroke="#7eb89a" stroke-width="1" opacity="0.4">
+      <animate attributeName="r" values="50;70;50" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;0;0.4" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="350" r="80" fill="none" stroke="#7eb89a" stroke-width="0.8" opacity="0.2">
+      <animate attributeName="r" values="80;110;80" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0;0.2" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
+  </svg>
   <div class="hero-content">
     <div class="hero-pill">NERS Accredited ICP Provider</div>
     <h1>Trusted Partner<br>in New <em>Electrical</em><br>Connections.</h1>
