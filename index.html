@@ -7,218 +7,193 @@
 <meta name="description" content="NERS-accredited Independent Connection Provider delivering new electrical connections, substation build, contestable works and EV infrastructure across the UK.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&family=Nunito:wght@200;300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
-body{background:#080808;color:#ede9e3;font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden;}
+body{background:#fff;color:#1a1a1a;font-family:'DM Sans',sans-serif;font-size:16px;line-height:1.6;overflow-x:hidden;}
 ::-webkit-scrollbar{width:3px;}
 ::-webkit-scrollbar-thumb{background:#7eb89a;border-radius:2px;}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 48px;display:flex;align-items:center;justify-content:space-between;height:64px;background:rgba(8,8,8,0.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.07);transition:background 0.3s;}
-nav.scrolled{background:rgba(8,8,8,0.98);}
-.nav-logo{text-decoration:none;display:flex;align-items:center;gap:12px;}
-.nav-mark{flex-shrink:0;}
-.nav-wordmark{font-family:'Nunito',sans-serif;font-weight:300;letter-spacing:0.08em;line-height:1.25;font-size:15px;color:#ede9e3;}
-.nav-links{display:flex;gap:28px;align-items:center;}
-.nav-links a{color:rgba(237,233,227,0.45);text-decoration:none;font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.2s;}
-.nav-links a:hover{color:#ede9e3;}
-.nav-cta{background:#7eb89a!important;color:#080808!important;padding:8px 20px;border-radius:8px;font-weight:700!important;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 48px;display:flex;align-items:center;justify-content:space-between;height:70px;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,0.08);transition:all 0.3s;}
+nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,0.08);}
+.nav-logo{text-decoration:none;display:flex;align-items:center;gap:4px;}
+.nav-logo-text{font-family:'DM Sans',sans-serif;font-weight:600;font-size:15px;color:#1a1a1a;line-height:1.1;}
+.nav-logo-text span{color:#7eb89a;}
+.nav-links{display:flex;gap:32px;align-items:center;}
+.nav-links a{color:#555;text-decoration:none;font-size:13px;font-weight:500;transition:color 0.2s;}
+.nav-links a:hover{color:#1a1a1a;}
+.nav-cta{background:#7eb89a!important;color:#fff!important;padding:10px 22px;border-radius:6px;font-weight:600!important;font-size:13px!important;}
+.nav-cta:hover{background:#6aa888!important;}
 
 /* HERO */
-#hero{min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden;padding-top:64px;}
-.hero-bg{position:absolute;inset:0;z-index:0;}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(to right, rgba(6,10,8,0.92) 0%, rgba(6,10,8,0.78) 35%, rgba(6,10,8,0.28) 60%, rgba(180,210,192,0.08) 80%, rgba(180,210,192,0.14) 100%);}
-.hero-overlay2{position:absolute;inset:0;background:linear-gradient(to top, rgba(6,10,8,0.55) 0%, transparent 50%);}
-.hero-content{position:relative;z-index:2;padding:80px 80px 100px;max-width:640px;}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(126,184,154,0.12);border:1px solid rgba(126,184,154,0.28);color:#7eb89a;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;padding:6px 14px;margin-bottom:28px;border-radius:20px;}
-.call-now{display:inline-flex;align-items:center;gap:0;margin-bottom:24px;text-decoration:none;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.4);border-radius:50px;transition:transform 0.2s,box-shadow 0.2s;}
-.call-now:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(126,184,154,0.25);}
-.call-now-left{background:#7eb89a;padding:14px 18px;display:flex;align-items:center;gap:10;flex-shrink:0;}
-.call-now-left span{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:0.08em;color:#080808;}
-.call-now-right{background:rgba(8,8,8,0.75);backdrop-filter:blur(16px);border:1px solid rgba(126,184,154,0.2);border-left:none;padding:14px 22px;display:flex;align-items:center;gap:16px;}
-.call-now-num{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:0.06em;color:#ede9e3;line-height:1;}
-.call-now-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:#7eb89a;margin-bottom:2px;}
-.call-now-div{width:1px;height:32px;background:rgba(126,184,154,0.2);}
-.call-now-hours{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(237,233,227,0.45);white-space:nowrap;}
-h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,7vw,90px);line-height:0.93;letter-spacing:0.015em;margin-bottom:24px;}
+#hero{min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden;padding-top:70px;background:#0d1a12;}
+.hero-img{position:absolute;inset:0;}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:center;opacity:0.45;}
+.hero-gradient{position:absolute;inset:0;background:linear-gradient(to right, rgba(10,20,14,0.92) 0%, rgba(10,20,14,0.75) 50%, rgba(10,20,14,0.3) 100%);}
+.hero-gradient2{position:absolute;inset:0;background:linear-gradient(to top, rgba(10,20,14,0.7) 0%, transparent 50%);}
+.hero-content{position:relative;z-index:2;padding:80px 80px 100px;max-width:700px;}
+.hero-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(126,184,154,0.15);border:1px solid rgba(126,184,154,0.4);color:#7eb89a;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;padding:7px 16px;border-radius:100px;margin-bottom:32px;}
+.hero-pill::before{content:'';width:6px;height:6px;background:#7eb89a;border-radius:50%;animation:blink 2s infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0.3;}}
+h1{font-family:'DM Sans',sans-serif;font-weight:700;font-size:clamp(40px,5.5vw,72px);line-height:1.1;letter-spacing:-0.02em;margin-bottom:24px;color:#fff;}
 h1 em{font-style:normal;color:#7eb89a;}
-.hero-sub{color:rgba(237,233,227,0.45);font-size:17px;font-weight:300;line-height:1.75;max-width:460px;margin-bottom:40px;}
-.hero-btns{display:flex;gap:12px;margin-bottom:56px;flex-wrap:wrap;}
-.btn-primary{background:#7eb89a;color:#080808;padding:13px 28px;font-weight:700;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border-radius:8px;transition:all 0.2s;display:inline-block;}
-.btn-primary:hover{opacity:0.88;transform:translateY(-2px);}
-.btn-ghost{border:1px solid rgba(255,255,255,0.12);color:#ede9e3;padding:13px 28px;font-weight:500;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;border-radius:8px;transition:all 0.2s;display:inline-block;}
-.btn-ghost:hover{border-color:#7eb89a;color:#7eb89a;}
-.hero-stats{display:flex;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.07);padding-top:36px;gap:0;}
-.hero-stat{padding-right:36px;margin-right:36px;border-right:1px solid rgba(255,255,255,0.07);}
+.hero-sub{color:rgba(255,255,255,0.7);font-size:17px;font-weight:300;line-height:1.75;max-width:500px;margin-bottom:40px;}
+.hero-btns{display:flex;gap:14px;margin-bottom:64px;flex-wrap:wrap;}
+.btn-primary{background:#7eb89a;color:#fff;padding:14px 32px;font-weight:600;font-size:14px;border-radius:8px;text-decoration:none;transition:all 0.2s;display:inline-block;}
+.btn-primary:hover{background:#6aa888;transform:translateY(-2px);}
+.hero-tags{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:48px;}
+.hero-tag{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.8);font-size:12px;font-weight:500;padding:6px 14px;border-radius:100px;}
+.hero-stats{display:flex;gap:0;border-top:1px solid rgba(255,255,255,0.15);padding-top:36px;}
+.hero-stat{padding-right:40px;margin-right:40px;border-right:1px solid rgba(255,255,255,0.15);}
 .hero-stat:last-child{border-right:none;}
-.stat-num{font-family:'Bebas Neue',sans-serif;font-size:44px;color:#7eb89a;line-height:1;}
-.stat-label{font-family:'DM Mono',monospace;font-size:9px;color:rgba(237,233,227,0.45);letter-spacing:0.1em;text-transform:uppercase;margin-top:4px;}
-.hero-badges{position:absolute;right:48px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:8px;z-index:3;}
-.hero-badge-item{background:rgba(8,8,8,0.75);border:1px solid rgba(255,255,255,0.12);backdrop-filter:blur(12px);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;padding:8px 16px;color:rgba(237,233,227,0.45);white-space:nowrap;}
-.hero-badge-item span{color:#7eb89a;margin-right:6px;}
-
-/* SECTIONS */
-section,.section-wrap{padding:100px 80px;}
-.section-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#7eb89a;margin-bottom:14px;}
-.section-label.dark{color:#4a8a6a;}
-.section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(34px,4vw,56px);line-height:1;letter-spacing:0.02em;margin-bottom:18px;}
-.section-title.dark{color:#111;}
-
-/* PHOTO STRIP */
-.photo-strip{display:grid;grid-template-columns:repeat(5,1fr);height:180px;overflow:hidden;}
-.strip-item{position:relative;overflow:hidden;border-right:1px solid rgba(255,255,255,0.07);}
-.strip-item svg{position:absolute;inset:0;width:100%;height:100%;filter:brightness(0.75) saturate(0.6);}
-.strip-label{position:absolute;bottom:8px;left:10px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:#7eb89a;opacity:0.8;}
+.stat-num{font-family:'DM Sans',sans-serif;font-weight:700;font-size:36px;color:#7eb89a;line-height:1;}
+.stat-label{font-size:12px;color:rgba(255,255,255,0.5);font-weight:400;margin-top:4px;letter-spacing:0.02em;}
 
 /* SERVICES */
-#services{background:#f8f9f7;}
-.services-top{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:48px;}
-.services-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(0,0,0,0.1);}
-.service-card{background:#fff;padding:44px 48px;position:relative;overflow:hidden;transition:background 0.3s;border-radius:0;}
-.service-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:#7eb89a;transform:scaleX(0);transform-origin:left;transition:transform 0.4s;}
-.service-card:hover{background:#f0f5f2;}
-.service-card:hover::after{transform:scaleX(1);}
-.service-num{font-family:'DM Mono',monospace;font-size:10px;color:#4a8a6a;letter-spacing:0.12em;margin-bottom:18px;opacity:0.9;}
-.service-card-title{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:0.03em;margin-bottom:12px;color:#111;}
-.service-card p{color:rgba(20,35,20,0.6);font-size:14px;font-weight:300;line-height:1.75;}
-
-/* EV BANNER */
-.ev-banner{margin-top:16px;display:grid;grid-template-columns:1fr 1fr;overflow:hidden;background:#f8f9f7;border-radius:12px;}
-.ev-banner-visual{position:relative;overflow:hidden;min-height:200px;}
-.ev-banner-visual svg{position:absolute;inset:0;width:100%;height:100%;}
-.ev-banner-content{padding:44px 48px;display:flex;flex-direction:column;justify-content:center;background:#f8f9f7;}
-.ev-banner-title{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:0.03em;margin-bottom:10px;color:#111;}
-.ev-banner-desc{color:rgba(20,35,20,0.65);font-size:14px;font-weight:300;line-height:1.7;margin-bottom:24px;}
+#services{padding:100px 80px;background:#fff;}
+.section-label{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#7eb89a;margin-bottom:12px;}
+h2{font-family:'DM Sans',sans-serif;font-weight:700;font-size:clamp(32px,4vw,52px);line-height:1.1;letter-spacing:-0.02em;margin-bottom:16px;color:#1a1a1a;}
+.services-intro{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:56px;gap:40px;}
+.services-intro p{color:#666;font-size:15px;font-weight:300;line-height:1.75;max-width:420px;}
+.services-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px;}
+.service-card{background:#f8faf9;border:1px solid #e8ede9;padding:40px;border-radius:16px;transition:all 0.3s;position:relative;overflow:hidden;}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:#7eb89a;transform:scaleX(0);transform-origin:left;transition:transform 0.3s;}
+.service-card:hover{background:#fff;box-shadow:0 8px 32px rgba(0,0,0,0.08);transform:translateY(-2px);}
+.service-card:hover::before{transform:scaleX(1);}
+.service-num{font-family:'DM Mono',monospace;font-size:11px;color:#7eb89a;letter-spacing:0.1em;margin-bottom:16px;}
+.service-title{font-family:'DM Sans',sans-serif;font-weight:600;font-size:20px;margin-bottom:12px;color:#1a1a1a;}
+.service-card p{color:#666;font-size:14px;font-weight:300;line-height:1.75;}
+.ev-card{background:#0d1a12;border-radius:16px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;min-height:200px;}
+.ev-card-img{position:relative;overflow:hidden;}
+.ev-card-img img{width:100%;height:100%;object-fit:cover;opacity:0.6;}
+.ev-card-img-overlay{position:absolute;inset:0;background:linear-gradient(to right,transparent 50%,#0d1a12 100%);}
+.ev-card-content{padding:40px;display:flex;flex-direction:column;justify-content:center;}
+.ev-card-content .section-label{color:#7eb89a;}
+.ev-card-title{font-family:'DM Sans',sans-serif;font-weight:700;font-size:24px;color:#fff;margin-bottom:10px;}
+.ev-card-desc{color:rgba(255,255,255,0.6);font-size:14px;font-weight:300;line-height:1.7;margin-bottom:20px;}
+.btn-outline-white{border:1px solid rgba(255,255,255,0.3);color:#fff;padding:10px 22px;border-radius:8px;font-size:13px;font-weight:500;text-decoration:none;transition:all 0.2s;display:inline-block;}
+.btn-outline-white:hover{background:rgba(255,255,255,0.1);}
 
 /* ICP */
-#icp-benefits{background:#f0f5f2;}
-.icp-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;margin-top:48px;}
-.icp-cards{display:flex;flex-direction:column;gap:12px;}
-.icp-card{background:#fff;border:1px solid rgba(0,0,0,0.08);padding:28px 32px;display:flex;gap:20px;align-items:flex-start;border-radius:12px;transition:border-color 0.3s;}
-.icp-card:hover{border-color:rgba(126,184,154,0.4);}
-.icp-icon{width:42px;height:42px;flex-shrink:0;background:rgba(126,184,154,0.15);border:1px solid rgba(126,184,154,0.4);display:flex;align-items:center;justify-content:center;font-size:18px;border-radius:10px;}
-.icp-card-title{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:0.03em;margin-bottom:7px;color:#111;}
-.icp-card p{color:rgba(20,35,20,0.6);font-size:13px;font-weight:300;line-height:1.75;}
-.icp-visual{position:relative;min-height:440px;}
-.icp-visual svg{position:absolute;inset:0;width:100%;height:100%;}
-.icp-stat-box{position:absolute;bottom:28px;left:28px;background:#fff;border:1px solid rgba(126,184,154,0.3);padding:18px 24px;border-radius:12px;}
-.icp-stat-num{font-family:'Bebas Neue',sans-serif;font-size:38px;color:#7eb89a;line-height:1;}
-.icp-stat-label{font-family:'DM Mono',monospace;font-size:9px;color:rgba(20,35,20,0.5);letter-spacing:0.12em;text-transform:uppercase;margin-top:4px;}
+#icp{padding:100px 80px;background:#f5f9f6;}
+.icp-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;margin-top:56px;}
+.icp-cards{display:flex;flex-direction:column;gap:16px;}
+.icp-card{background:#fff;border:1px solid #e8ede9;padding:28px 32px;display:flex;gap:20px;align-items:flex-start;border-radius:12px;transition:all 0.3s;}
+.icp-card:hover{box-shadow:0 4px 20px rgba(0,0,0,0.06);transform:translateY(-2px);}
+.icp-icon{width:44px;height:44px;flex-shrink:0;background:rgba(126,184,154,0.12);border:1px solid rgba(126,184,154,0.25);display:flex;align-items:center;justify-content:center;font-size:20px;border-radius:10px;}
+.icp-card-title{font-weight:600;font-size:16px;margin-bottom:6px;color:#1a1a1a;}
+.icp-card p{color:#666;font-size:13px;font-weight:300;line-height:1.7;}
+.icp-visual{position:relative;border-radius:16px;overflow:hidden;}
+.icp-visual img{width:100%;height:480px;object-fit:cover;display:block;}
+.icp-visual-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(13,26,18,0.7) 0%,transparent 60%);}
+.icp-stat{position:absolute;bottom:28px;left:28px;background:rgba(255,255,255,0.95);padding:20px 28px;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.1);}
+.icp-stat-num{font-weight:700;font-size:36px;color:#7eb89a;line-height:1;}
+.icp-stat-label{font-size:12px;color:#666;margin-top:4px;font-family:'DM Mono',monospace;letter-spacing:0.08em;text-transform:uppercase;}
 
 /* ABOUT */
-#about{display:grid;grid-template-columns:1fr 1.1fr;min-height:620px;overflow:hidden;padding:0;background:#f0f5f2;}
-.about-visual{position:relative;overflow:hidden;background:#f0f5f2;min-height:620px;}
-.about-visual img{width:100%;height:100%;object-fit:cover;object-position:top;filter:brightness(0.6) saturate(0.5);display:block;}
-.about-visual-overlay{position:absolute;inset:0;background:linear-gradient(to right, transparent 40%, #f0f5f2 100%);}
-.about-content{background:#f0f5f2;padding:80px 80px 80px 56px;display:flex;flex-direction:column;justify-content:center;}
-.about-quote{margin:24px 0 28px;padding:20px 24px;border-left:2px solid #7eb89a;background:rgba(126,184,154,0.1);font-style:italic;font-size:15px;color:#111;line-height:1.75;font-weight:300;border-radius:0 8px 8px 0;}
-.about-name{font-weight:600;font-size:15px;margin-bottom:4px;color:#111;}
-.about-role{font-family:'DM Mono',monospace;font-size:10px;color:#4a8a6a;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:32px;}
-.about-stats{display:flex;border-top:1px solid rgba(0,0,0,0.1);padding-top:24px;}
-.about-stat{flex:1;padding-right:16px;margin-right:16px;border-right:1px solid rgba(0,0,0,0.1);}
+#about{padding:0;display:grid;grid-template-columns:1fr 1fr;min-height:600px;overflow:hidden;}
+.about-img{position:relative;overflow:hidden;}
+.about-img img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;}
+.about-img-overlay{position:absolute;inset:0;background:linear-gradient(to right,transparent 60%,#fff 100%);}
+.about-content{padding:80px 80px 80px 60px;display:flex;flex-direction:column;justify-content:center;background:#fff;}
+.about-content h2{margin-bottom:16px;}
+.about-content p{color:#666;font-size:15px;font-weight:300;line-height:1.8;margin-bottom:8px;}
+.about-quote{margin:24px 0;padding:20px 24px;border-left:3px solid #7eb89a;background:#f5f9f6;font-style:italic;font-size:15px;color:#333;line-height:1.75;border-radius:0 8px 8px 0;}
+.about-name{font-weight:600;font-size:16px;color:#1a1a1a;margin-top:16px;}
+.about-role{font-size:13px;color:#7eb89a;font-family:'DM Mono',monospace;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:32px;}
+.about-stats{display:flex;gap:0;border-top:1px solid #e8ede9;padding-top:28px;}
+.about-stat{flex:1;padding-right:20px;margin-right:20px;border-right:1px solid #e8ede9;}
 .about-stat:last-child{border-right:none;}
-.about-stat-num{font-family:'Bebas Neue',sans-serif;font-size:32px;color:#7eb89a;line-height:1;}
-.about-stat-label{font-family:'DM Mono',monospace;font-size:9px;color:rgba(20,35,20,0.5);letter-spacing:0.1em;text-transform:uppercase;margin-top:4px;}
+.about-stat-num{font-weight:700;font-size:32px;color:#7eb89a;line-height:1;}
+.about-stat-label{font-size:11px;color:#999;font-family:'DM Mono',monospace;letter-spacing:0.08em;text-transform:uppercase;margin-top:4px;}
 
 /* PORTFOLIO */
-#portfolio{padding:100px 80px 0;background:#fff;}
-.portfolio-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:32px;padding-bottom:32px;border-bottom:1px solid rgba(0,0,0,0.1);}
+#portfolio{padding:100px 80px;background:#fff;}
+.portfolio-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:40px;}
 .filter-tabs{display:flex;gap:8px;flex-wrap:wrap;}
-.filter-tab{padding:7px 16px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;background:none;border:1px solid rgba(0,0,0,0.15);color:rgba(20,35,20,0.5);cursor:pointer;border-radius:20px;transition:all 0.2s;}
-.filter-tab.active,.filter-tab:hover{background:#7eb89a;border-color:#7eb89a;color:#080808;font-weight:700;}
-.portfolio-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;}
-.p-item{position:relative;overflow:hidden;aspect-ratio:1;cursor:pointer;border-radius:10px;}
-.p-item svg{position:absolute;inset:0;width:100%;height:100%;filter:brightness(0.72) saturate(0.55);transition:all 0.5s;}
-.p-item:hover svg{filter:brightness(0.9) saturate(0.85);transform:scale(1.05);}
-.p-overlay{position:absolute;inset:0;background:linear-gradient(to top, rgba(8,8,8,0.92) 0%, transparent 55%);opacity:0;transition:opacity 0.3s;padding:14px;display:flex;align-items:flex-end;}
+.filter-tab{padding:8px 18px;font-size:12px;font-weight:500;background:#fff;border:1px solid #ddd;color:#666;cursor:pointer;border-radius:100px;transition:all 0.2s;font-family:'DM Sans',sans-serif;}
+.filter-tab.active,.filter-tab:hover{background:#7eb89a;border-color:#7eb89a;color:#fff;}
+.portfolio-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+.p-item{position:relative;overflow:hidden;border-radius:12px;aspect-ratio:1;cursor:pointer;}
+.p-item img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s;}
+.p-item:hover img{transform:scale(1.06);}
+.p-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.85) 0%,transparent 60%);opacity:0;transition:opacity 0.3s;padding:16px;display:flex;align-items:flex-end;}
 .p-item:hover .p-overlay{opacity:1;}
-.p-cat{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:#7eb89a;margin-bottom:3px;}
-.p-name{font-size:12px;font-weight:600;color:#ede9e3;}
+.p-cat{font-size:10px;font-family:'DM Mono',monospace;letter-spacing:0.1em;text-transform:uppercase;color:#7eb89a;margin-bottom:3px;}
+.p-name{font-size:13px;font-weight:600;color:#fff;}
 
 /* EV CTA */
-.ev-cta{background:#1a2e1a;padding:80px 80px;position:relative;overflow:hidden;}
-.ev-cta-bg{position:absolute;inset:0;opacity:0.18;}
-.ev-cta-bg svg{width:100%;height:100%;}
-.ev-cta-overlay{position:absolute;inset:0;background:linear-gradient(to right, rgba(26,46,26,0.95) 0%, rgba(26,46,26,0.7) 100%);}
-.ev-cta-inner{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:32px;}
-.ev-cta-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,4vw,52px);line-height:1;letter-spacing:0.02em;color:#ede9e3;margin-bottom:16px;}
-.ev-cta-desc{color:rgba(237,233,227,0.7);font-size:15px;font-weight:300;line-height:1.8;max-width:520px;}
-.btn-ev{display:inline-flex;align-items:center;gap:12px;background:#7eb89a;color:#080808;padding:20px 44px;font-family:'Bebas Neue',sans-serif;font-weight:700;font-size:22px;letter-spacing:0.08em;text-decoration:none;border-radius:50px;box-shadow:0 8px 32px rgba(126,184,154,0.35);transition:all 0.2s;flex-shrink:0;white-space:nowrap;}
-.btn-ev:hover{opacity:0.88;transform:translateY(-2px);}
+.ev-cta{margin:0 80px 80px;background:#0d1a12;border-radius:20px;overflow:hidden;position:relative;padding:64px 80px;display:flex;align-items:center;justify-content:space-between;gap:40px;}
+.ev-cta-title{font-family:'DM Sans',sans-serif;font-weight:700;font-size:clamp(28px,3vw,42px);color:#fff;line-height:1.2;margin-bottom:16px;}
+.ev-cta-desc{color:rgba(255,255,255,0.65);font-size:15px;font-weight:300;line-height:1.8;max-width:480px;}
+.btn-ev{display:inline-flex;align-items:center;gap:10px;background:#7eb89a;color:#fff;padding:16px 36px;font-weight:600;font-size:15px;border-radius:100px;text-decoration:none;transition:all 0.2s;flex-shrink:0;white-space:nowrap;}
+.btn-ev:hover{background:#6aa888;transform:translateY(-2px);}
 
 /* CONTACT */
-#contact{background:#111;padding:100px 80px;}
+#contact{padding:100px 80px;background:#f5f9f6;}
 .contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:80px;margin-top:48px;}
-.contact-item{background:#131518;border:1px solid rgba(255,255,255,0.07);padding:20px 24px;display:flex;gap:16px;align-items:center;border-radius:12px;margin-bottom:12px;transition:border-color 0.3s;}
-.contact-item:hover{border-color:rgba(126,184,154,0.3);}
-.contact-icon{width:40px;height:40px;flex-shrink:0;background:rgba(126,184,154,0.12);border:1px solid rgba(126,184,154,0.28);display:flex;align-items:center;justify-content:center;font-size:16px;border-radius:10px;}
+.contact-item{background:#fff;border:1px solid #e8ede9;padding:20px 24px;display:flex;gap:16px;align-items:center;border-radius:12px;margin-bottom:12px;transition:all 0.2s;}
+.contact-item:hover{box-shadow:0 4px 16px rgba(0,0,0,0.06);transform:translateY(-1px);}
+.contact-icon{width:40px;height:40px;flex-shrink:0;background:rgba(126,184,154,0.12);border:1px solid rgba(126,184,154,0.25);display:flex;align-items:center;justify-content:center;font-size:16px;border-radius:10px;}
 .ci-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:#7eb89a;margin-bottom:4px;}
-.ci-val{font-size:13px;font-weight:500;color:#ede9e3;text-decoration:none;}
-.contact-form{display:flex;flex-direction:column;gap:12px;}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.ci-val{font-size:14px;font-weight:500;color:#1a1a1a;text-decoration:none;}
+.contact-form{display:flex;flex-direction:column;gap:14px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
 .form-group{display:flex;flex-direction:column;gap:6px;}
-.form-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(237,233,227,0.45);}
-.form-input,.form-select,.form-textarea{background:#131518;border:1px solid rgba(255,255,255,0.07);color:#ede9e3;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14px;outline:none;width:100%;border-radius:8px;transition:border-color 0.2s;}
-.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:#7eb89a;}
-.form-textarea{resize:vertical;min-height:110px;}
-.form-select option{background:#131518;}
-.btn-submit{background:#7eb89a;color:#080808;border:none;padding:13px 28px;font-family:'DM Sans',sans-serif;font-weight:700;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;border-radius:8px;transition:all 0.2s;align-self:flex-start;}
-.btn-submit:hover{opacity:0.88;transform:translateY(-2px);}
+.form-label{font-size:12px;font-weight:500;color:#555;letter-spacing:0.02em;}
+.form-input,.form-select,.form-textarea{background:#fff;border:1px solid #ddd;color:#1a1a1a;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:14px;outline:none;width:100%;border-radius:8px;transition:border-color 0.2s;}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:#7eb89a;box-shadow:0 0 0 3px rgba(126,184,154,0.1);}
+.form-textarea{resize:vertical;min-height:120px;}
+.btn-submit{background:#7eb89a;color:#fff;border:none;padding:14px 32px;font-family:'DM Sans',sans-serif;font-weight:600;font-size:14px;cursor:pointer;border-radius:8px;transition:all 0.2s;align-self:flex-start;}
+.btn-submit:hover{background:#6aa888;transform:translateY(-2px);}
 
 /* FOOTER */
-footer{background:#080808;border-top:1px solid rgba(255,255,255,0.07);padding:64px 80px 40px;}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:60px;margin-bottom:40px;}
-.footer-logo{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:0.07em;margin-bottom:12px;}
+footer{background:#0d1a12;padding:64px 80px 40px;}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:60px;margin-bottom:48px;}
+.footer-logo{font-family:'DM Sans',sans-serif;font-weight:700;font-size:20px;color:#fff;margin-bottom:14px;}
 .footer-logo span{color:#7eb89a;}
-.footer-tagline{color:rgba(237,233,227,0.45);font-size:13px;line-height:1.75;max-width:280px;margin-bottom:16px;}
-.footer-contact div,.footer-contact a{color:rgba(237,233,227,0.45);font-size:12px;text-decoration:none;display:block;margin-bottom:4px;transition:color 0.2s;}
+.footer-tagline{color:rgba(255,255,255,0.5);font-size:13px;line-height:1.75;max-width:280px;margin-bottom:20px;}
+.footer-contact a,.footer-contact div{color:rgba(255,255,255,0.5);font-size:12px;text-decoration:none;display:block;margin-bottom:6px;transition:color 0.2s;}
 .footer-contact a:hover{color:#7eb89a;}
-.footer-col-title{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:#7eb89a;margin-bottom:16px;}
+.footer-col-title{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#7eb89a;margin-bottom:18px;}
 .footer-links{list-style:none;display:flex;flex-direction:column;gap:10px;}
-.footer-links a{color:rgba(237,233,227,0.45);text-decoration:none;font-size:13px;transition:color 0.2s;}
-.footer-links a:hover{color:#ede9e3;}
-.footer-bottom{padding-top:24px;border-top:1px solid rgba(255,255,255,0.07);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
-.footer-copy{font-family:'DM Mono',monospace;font-size:10px;color:rgba(237,233,227,0.45);letter-spacing:0.08em;}
-.footer-legal{display:flex;gap:20px;}
-.footer-legal a{font-size:11px;color:rgba(237,233,227,0.45);text-decoration:none;}
+.footer-links a{color:rgba(255,255,255,0.5);text-decoration:none;font-size:13px;transition:color 0.2s;}
+.footer-links a:hover{color:#fff;}
+.footer-bottom{padding-top:28px;border-top:1px solid rgba(255,255,255,0.1);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.footer-copy{font-size:12px;color:rgba(255,255,255,0.4);}
+.footer-legal{display:flex;gap:24px;}
+.footer-legal a{font-size:12px;color:rgba(255,255,255,0.4);text-decoration:none;transition:color 0.2s;}
+.footer-legal a:hover{color:#fff;}
 
-/* MOBILE */
 @media(max-width:768px){
   nav{padding:0 20px;}
   .nav-links{display:none;}
-  .nav-cta-mobile{background:#7eb89a;color:#080808;padding:8px 16px;font-size:11px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;text-decoration:none;border-radius:8px;}
+  .nav-cta-mob{background:#7eb89a;color:#fff;padding:9px 18px;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none;}
   .hero-content{padding:60px 24px 80px;max-width:100%;}
-  .hero-badges{display:none;}
-  .photo-strip{grid-template-columns:repeat(3,1fr);}
-  .strip-item:nth-child(4),.strip-item:nth-child(5){display:none;}
-  section,.section-wrap{padding:60px 24px;}
+  h1{font-size:clamp(36px,10vw,56px);}
+  #services,#icp,#portfolio,#contact{padding:60px 24px;}
   .services-grid{grid-template-columns:1fr;}
-  .ev-banner{grid-template-columns:1fr;}
-  .ev-banner-visual{display:none;}
-  .icp-grid{grid-template-columns:1fr;gap:24px;}
+  .services-intro{flex-direction:column;}
+  .ev-card{grid-template-columns:1fr;}
+  .ev-card-img{display:none;}
+  .icp-grid{grid-template-columns:1fr;gap:40px;}
   .icp-visual{display:none;}
   #about{grid-template-columns:1fr;}
-  .about-visual{min-height:260px;}
-  .about-content{padding:40px 24px;}
+  .about-img{height:320px;}
+  .about-content{padding:48px 24px;}
   .portfolio-grid{grid-template-columns:repeat(2,1fr);}
   .portfolio-head{flex-direction:column;align-items:flex-start;gap:16px;}
-  .ev-cta{padding:60px 24px;}
-  .ev-cta-inner{flex-direction:column;align-items:flex-start;}
+  .ev-cta{margin:0 24px 60px;padding:48px 32px;flex-direction:column;align-items:flex-start;border-radius:16px;}
   .contact-grid{grid-template-columns:1fr;gap:40px;}
   footer{padding:48px 24px 32px;}
   .footer-grid{grid-template-columns:1fr;gap:32px;}
   .footer-bottom{flex-direction:column;}
-  h1{font-size:clamp(48px,12vw,72px);}
-  .services-top{flex-direction:column;align-items:flex-start;gap:16px;}
+  .hero-stats{flex-wrap:wrap;gap:24px;}
+  .hero-stat{border-right:none;padding-right:0;margin-right:0;}
+  .form-row{grid-template-columns:1fr;}
 }
-
-/* ANIMATIONS */
-@keyframes p1{0%{stroke-dashoffset:64}100%{stroke-dashoffset:0}}
-@keyframes p2{0%{stroke-dashoffset:64}100%{stroke-dashoffset:0}}
-@keyframes p3{0%{stroke-dashoffset:64}100%{stroke-dashoffset:0}}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
 </style>
 </head>
 <body>
@@ -226,204 +201,95 @@ footer{background:#080808;border-top:1px solid rgba(255,255,255,0.07);padding:64
 <!-- NAV -->
 <nav id="mainNav">
   <a href="#hero" class="nav-logo">
-    <svg class="nav-mark" width="30" height="26" viewBox="0 0 30 26">
-      <line x1="0" y1="2" x2="30" y2="2" stroke="#7eb89a" stroke-width="1.5" stroke-opacity="0.2"/>
-      <circle r="2.2" fill="#7eb89a"><animateMotion path="M0,2 L30,2" dur="1.4s" begin="0s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" dur="1.4s" begin="0s" repeatCount="indefinite"/></circle>
-      <line x1="0" y1="13" x2="30" y2="13" stroke="#7eb89a" stroke-width="1.5" stroke-opacity="0.2"/>
-      <circle r="2.2" fill="#7eb89a"><animateMotion path="M0,13 L30,13" dur="1.4s" begin="0.47s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" dur="1.4s" begin="0.47s" repeatCount="indefinite"/></circle>
-      <line x1="0" y1="24" x2="30" y2="24" stroke="#7eb89a" stroke-width="1.5" stroke-opacity="0.2"/>
-      <circle r="2.2" fill="#7eb89a"><animateMotion path="M0,24 L30,24" dur="1.4s" begin="0.94s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;1;1;0" dur="1.4s" begin="0.94s" repeatCount="indefinite"/></circle>
-    </svg>
-    <div class="nav-wordmark">UK POWER CONNECTIONS</div>
+    <div class="nav-logo-text">UK <span>POWER</span><br>CONNECTIONS</div>
   </a>
   <div class="nav-links" id="navLinks">
     <a href="#services">Services</a>
-    <a href="#icp-benefits">ICP Benefits</a>
+    <a href="ev-projects.html">EV Projects</a>
+    <a href="#icp">ICP Benefits</a>
     <a href="#about">About</a>
     <a href="#portfolio">Portfolio</a>
-    <a href="#contact" class="nav-cta">Get In Touch</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact" class="nav-cta">Get in touch</a>
   </div>
-  <a href="#contact" class="nav-cta-mobile" id="navMobile">Contact</a>
+  <a href="#contact" class="nav-cta-mob" id="navMobile">Get in touch</a>
 </nav>
 
 <!-- HERO -->
 <section id="hero">
-  <div class="hero-bg">
-    <svg viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;position:absolute;inset:0;display:block;">
-      <defs>
-        <radialGradient id="ambG" cx="55%" cy="45%" r="55%"><stop offset="0%" stop-color="#1a3525"/><stop offset="60%" stop-color="#0a1410"/><stop offset="100%" stop-color="#050808"/></radialGradient>
-        <radialGradient id="fLight" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#7eb89a" stop-opacity="0.14"/><stop offset="100%" stop-color="#7eb89a" stop-opacity="0"/></radialGradient>
-        <filter id="cGlow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-        <filter id="lHalo"><feGaussianBlur stdDeviation="20" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-      </defs>
-      <rect width="1400" height="900" fill="url(#ambG)"/>
-      <rect width="1400" height="90" fill="#050808"/>
-      <rect x="0" y="740" width="1400" height="160" fill="#070d09"/>
-      <rect x="0" y="380" width="1400" height="360" fill="#070c09"/>
-      <!-- Ceiling lights -->
-      <rect x="85" y="74" width="110" height="5" rx="2" fill="#dff0e8" opacity="0.95"/>
-      <rect x="325" y="74" width="110" height="5" rx="2" fill="#dff0e8" opacity="0.95"/>
-      <rect x="565" y="74" width="110" height="5" rx="2" fill="#dff0e8" opacity="0.95"/>
-      <rect x="805" y="74" width="110" height="5" rx="2" fill="#dff0e8" opacity="0.95"/>
-      <rect x="1045" y="74" width="110" height="5" rx="2" fill="#dff0e8" opacity="0.95"/>
-      <rect x="1285" y="74" width="110" height="5" rx="2" fill="#dff0e8" opacity="0.95"/>
-      <!-- Chargers -->
-      <rect x="62" y="400" width="76" height="340" rx="6" fill="#0d1912" stroke="#192c1c" stroke-width="1.5"/>
-      <rect x="72" y="425" width="56" height="88" rx="3" fill="#070d09"/>
-      <rect x="74" y="427" width="52" height="84" rx="2" fill="#7eb89a" opacity="0.07"/>
-      <rect x="80" y="464" width="40" height="7" rx="2" fill="#09100a"/>
-      <rect x="80" y="464" width="17" height="7" rx="2" fill="#7eb89a" opacity="0.88"/>
-      <rect x="332" y="400" width="76" height="340" rx="6" fill="#0d1912" stroke="#192c1c" stroke-width="1.5"/>
-      <rect x="342" y="425" width="56" height="88" rx="3" fill="#070d09"/>
-      <rect x="344" y="427" width="52" height="84" rx="2" fill="#7eb89a" opacity="0.2" filter="url(#cGlow)"/>
-      <circle cx="398" cy="420" r="6" fill="#7eb89a" opacity="0.95" filter="url(#cGlow)"/>
-      <circle cx="398" cy="420" r="13" fill="#7eb89a" opacity="0.18"/>
-      <rect x="344" y="464" width="40" height="7" rx="2" fill="#09100a"/>
-      <rect x="344" y="464" width="34" height="7" rx="2" fill="#7eb89a" opacity="0.88"/>
-      <rect x="602" y="400" width="76" height="340" rx="6" fill="#0d1912" stroke="#192c1c" stroke-width="1.5"/>
-      <rect x="612" y="425" width="56" height="88" rx="3" fill="#070d09"/>
-      <rect x="614" y="427" width="52" height="84" rx="2" fill="#7eb89a" opacity="0.07"/>
-      <!-- Cars -->
-      <rect x="12" y="582" width="278" height="156" rx="13" fill="#1a2a1e" stroke="#192a1e" stroke-width="1.5"/>
-      <rect x="46" y="532" width="208" height="60" rx="11" fill="#101c13"/>
-      <circle cx="62" cy="736" r="33" fill="#070c08" stroke="#131c12" stroke-width="3"/>
-      <circle cx="62" cy="736" r="17" fill="#0b1210"/>
-      <circle cx="228" cy="736" r="33" fill="#070c08" stroke="#131c12" stroke-width="3"/>
-      <circle cx="228" cy="736" r="17" fill="#0b1210"/>
-      <rect x="482" y="558" width="338" height="178" rx="13" fill="#141e18" stroke="#152012" stroke-width="1.5"/>
-      <rect x="522" y="498" width="258" height="72" rx="13" fill="#0e1a11"/>
-      <circle cx="548" cy="736" r="38" fill="#070c08" stroke="#131c12" stroke-width="3"/>
-      <circle cx="548" cy="736" r="20" fill="#0b1210"/>
-      <circle cx="702" cy="736" r="38" fill="#070c08" stroke="#131c12" stroke-width="3"/>
-      <circle cx="702" cy="736" r="20" fill="#0b1210"/>
-      <rect x="612" y="606" width="42" height="26" rx="5" fill="#7eb89a" opacity="0.38" filter="url(#cGlow)"/>
-      <!-- Active charging cable -->
-      <path d="M650,632 Q695,655 698,685 Q700,715 696,736" fill="none" stroke="#0e1910" stroke-width="7" stroke-linecap="round"/>
-      <path d="M650,632 Q695,655 698,685 Q700,715 696,736" fill="none" stroke="#7eb89a" stroke-width="2.5" stroke-linecap="round" opacity="0.35"/>
-      <circle r="5" fill="#7eb89a" opacity="0.9" filter="url(#cGlow)">
-        <animateMotion path="M650,632 Q695,655 698,685 Q700,715 696,736" dur="1.6s" repeatCount="indefinite"/>
-        <animate attributeName="opacity" values="0;1;1;0" dur="1.6s" repeatCount="indefinite"/>
-      </circle>
-      <!-- Floor lights -->
-      <ellipse cx="180" cy="755" rx="75" ry="16" fill="url(#fLight)" opacity="0.9"/>
-      <ellipse cx="480" cy="755" rx="75" ry="16" fill="url(#fLight)" opacity="0.9"/>
-      <ellipse cx="780" cy="755" rx="75" ry="16" fill="url(#fLight)" opacity="0.9"/>
-    </svg>
-    <div class="hero-overlay"></div>
-    <div class="hero-overlay2"></div>
+  <div class="hero-img">
+    <img src="https://uk-power-connections.netlify.app/team-photo.jpg" alt="UK Power Connections Team">
   </div>
-
+  <div class="hero-gradient"></div>
+  <div class="hero-gradient2"></div>
   <div class="hero-content">
-    <!-- Call Now -->
-    <a href="tel:01727229040" class="call-now">
-      <div class="call-now-left">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#080808" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        <span>Call Now</span>
-      </div>
-      <div class="call-now-right">
-        <div>
-          <div class="call-now-label">Free Consultation</div>
-          <div class="call-now-num">01727 229040</div>
-        </div>
-        <div class="call-now-div"></div>
-        <div class="call-now-hours">Mon–Fri<br>8am–6pm</div>
-      </div>
-    </a>
-
-    <div class="hero-badge"><span style="font-size:7px;animation:pulse 2.2s infinite">●</span> NERS Accredited ICP Provider</div>
-
+    <div class="hero-pill">NERS Accredited ICP Provider</div>
     <h1>Trusted Partner<br>in New <em>Electrical</em><br>Connections.</h1>
-
     <p class="hero-sub">UK Power Connections provides expert design and delivery for electrical connection projects across the UK. From survey to energisation — one contractor, full accountability.</p>
-
     <div class="hero-btns">
-      <a href="#contact" class="btn-primary">Let's Talk</a>
-      <a href="#services" class="btn-ghost">Our Services</a>
+      <a href="#contact" class="btn-primary">Let's talk</a>
     </div>
-
+    <div class="hero-tags">
+      <span class="hero-tag">Design</span>
+      <span class="hero-tag">Delivery</span>
+      <span class="hero-tag">Approvals</span>
+      <span class="hero-tag">Adoption</span>
+      <span class="hero-tag">Full Scopes NERS Accredited</span>
+      <span class="hero-tag">Independent Connection Provider (ICP)</span>
+    </div>
     <div class="hero-stats">
-      <div class="hero-stat"><div class="stat-num">500+</div><div class="stat-label">Connections</div></div>
-      <div class="hero-stat"><div class="stat-num">10+</div><div class="stat-label">Years Exp</div></div>
+      <div class="hero-stat"><div class="stat-num">500+</div><div class="stat-label">Connections Delivered</div></div>
+      <div class="hero-stat"><div class="stat-num">10+</div><div class="stat-label">Years Experience</div></div>
       <div class="hero-stat" style="border-right:none"><div class="stat-num">UK</div><div class="stat-label">Wide Coverage</div></div>
     </div>
   </div>
-
-  <div class="hero-badges" id="heroBadges">
-    <div class="hero-badge-item"><span>✓</span>NERS Accredited</div>
-    <div class="hero-badge-item"><span>✓</span>Full ICP Scope</div>
-    <div class="hero-badge-item"><span>✓</span>DNO Independent</div>
-    <div class="hero-badge-item"><span>✓</span>EV Infrastructure</div>
-  </div>
 </section>
 
-<!-- PHOTO STRIP -->
-<div class="photo-strip">
-  <div class="strip-item">
-    <svg viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg"><rect width="1400" height="900" fill="#0a1410"/><rect x="62" y="400" width="76" height="340" rx="6" fill="#0d1912"/><circle cx="62" cy="736" r="33" fill="#070c08"/><rect x="612" y="606" width="42" height="26" rx="5" fill="#7eb89a" opacity="0.5"/></svg>
-    <div class="strip-label">Substation</div>
-  </div>
-  <div class="strip-item">
-    <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg"><rect width="800" height="500" fill="#080a08"/><rect x="80" y="200" width="60" height="180" rx="4" fill="#0e1512" stroke="#1a2e20" stroke-width="1.5"/><circle cx="128" cy="210" r="6" fill="#7eb89a" opacity="0.9"/><rect x="80" y="380" width="200" height="50" rx="8" fill="#0c1410"/></svg>
-    <div class="strip-label">EV Charging</div>
-  </div>
-  <div class="strip-item">
-    <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg"><rect width="800" height="500" fill="#0a1a0f"/><circle cx="100" cy="250" r="28" fill="#0d1f15" stroke="#7eb89a" stroke-width="2"/><circle cx="100" cy="250" r="7" fill="#7eb89a" opacity="0.9"/><line x1="128" y1="250" x2="300" y2="250" stroke="#7eb89a" stroke-width="3" opacity="0.6"/><circle cx="300" cy="250" r="8" fill="#7eb89a" opacity="0.5"/><line x1="300" y1="250" x2="520" y2="80" stroke="#7eb89a" stroke-width="1.5" opacity="0.45" stroke-dasharray="6 3"/><line x1="300" y1="250" x2="520" y2="250" stroke="#7eb89a" stroke-width="1.5" opacity="0.45" stroke-dasharray="6 3"/><line x1="300" y1="250" x2="520" y2="420" stroke="#7eb89a" stroke-width="1.5" opacity="0.45" stroke-dasharray="6 3"/></svg>
-    <div class="strip-label">Connections</div>
-  </div>
-  <div class="strip-item">
-    <svg viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg"><rect width="1400" height="900" fill="#0a1410"/><rect x="0" y="680" width="1400" height="120" fill="#050707"/><line x1="0" y1="680" x2="700" y2="380" stroke="#161616" stroke-width="6"/><line x1="1400" y1="680" x2="700" y2="380" stroke="#161616" stroke-width="6"/></svg>
-    <div class="strip-label">Infrastructure</div>
-  </div>
-  <div class="strip-item">
-    <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg"><rect width="800" height="500" fill="#080808"/><rect x="100" y="200" width="600" height="200" fill="#060606"/><rect x="200" y="230" width="20" height="60" rx="3" fill="#0a1a10"/><rect x="350" y="230" width="20" height="60" rx="3" fill="#7eb89a" opacity="0.3"/><rect x="500" y="230" width="20" height="60" rx="3" fill="#0a1a10"/></svg>
-    <div class="strip-label">Cable Works</div>
-  </div>
-</div>
-
 <!-- SERVICES -->
-<section id="services" style="background:#f8f9f7;padding:100px 80px;">
-  <div class="services-top">
+<section id="services">
+  <div class="services-intro">
     <div>
-      <div class="section-label dark">Our Services</div>
-      <h2 class="section-title dark">Complete Utility<br>Connections</h2>
+      <div class="section-label">Our Services</div>
+      <h2>Complete Utility<br>Connections</h2>
     </div>
-    <p style="color:rgba(20,35,20,0.6);font-size:15px;font-weight:300;line-height:1.8;max-width:380px;text-align:right;">We manage every aspect of your connection, from custom network solutions to complex civil and electrical works.</p>
+    <p>We manage every aspect of your connection, from designing custom network solutions to conducting complex civil and electrical works.</p>
   </div>
   <div class="services-grid">
-    <div class="service-card"><div class="service-num">— 01</div><div class="service-card-title">Independent Connection Provider</div><p>NERS-accredited to design, build and maintain electrical infrastructure for new or modified connections — without going through the DNO queue.</p></div>
-    <div class="service-card"><div class="service-num">— 02</div><div class="service-card-title">Contestable Works</div><p>Cable laying, jointing, civil works, duct installation and substation installation for adoptable infrastructure — delivered to DNO adoption standards.</p></div>
-    <div class="service-card"><div class="service-num">— 03</div><div class="service-card-title">ICP / IDNO Coordination</div><p>Full management of the connection process, acting as intermediary between your project and the DNO — handling all technical and commercial interfaces.</p></div>
-    <div class="service-card"><div class="service-num">— 04</div><div class="service-card-title">Project Management</div><p>Dedicated personal service with a single point of contact to speed up delivery, resolve technical issues and keep your programme on track.</p></div>
+    <div class="service-card"><div class="service-num">01</div><div class="service-title">Independent Connection Provider (ICP)</div><p>NERS-accredited to design, build and maintain electrical infrastructure for new or modified connections — without going through the DNO queue.</p></div>
+    <div class="service-card"><div class="service-num">02</div><div class="service-title">Contestable Works</div><p>Cable laying, jointing, civil works, duct installation and substation installation for adoptable infrastructure — delivered to DNO adoption standards.</p></div>
+    <div class="service-card"><div class="service-num">03</div><div class="service-title">ICP / IDNO Coordination</div><p>Full management of the connection process, acting as an intermediary between your project and the DNO — handling all technical and commercial interfaces.</p></div>
+    <div class="service-card"><div class="service-num">04</div><div class="service-title">Project Management</div><p>Dedicated personal service with a single point of contact to speed up delivery, resolve technical issues and keep your programme on track.</p></div>
   </div>
-  <div class="ev-banner">
-    <div class="ev-banner-visual">
-      <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;"><rect width="800" height="500" fill="#080a08"/><rect x="80" y="200" width="60" height="180" rx="4" fill="#0e1512" stroke="#1a2e20" stroke-width="1.5"/><rect x="88" y="215" width="44" height="70" rx="2" fill="#0d0d0d"/><rect x="90" y="217" width="40" height="66" rx="1" fill="#7eb89a" opacity="0.15"/><circle cx="128" cy="210" r="5" fill="#7eb89a" opacity="0.9"/><rect x="290" y="200" width="60" height="180" rx="4" fill="#0e1512" stroke="#1a2e20" stroke-width="1.5"/><rect x="298" y="215" width="44" height="70" rx="2" fill="#0d0d0d"/><rect x="300" y="217" width="40" height="66" rx="1" fill="#7eb89a" opacity="0.08"/><rect x="60" y="330" width="200" height="76" rx="10" fill="#0d0d0d" stroke="#151515" stroke-width="1.5"/><circle cx="85" cy="406" r="22" fill="#0a0a0a" stroke="#161616" stroke-width="2.5"/><circle cx="245" cy="406" r="22" fill="#0a0a0a" stroke="#161616" stroke-width="2.5"/><rect x="238" y="358" width="36" height="22" rx="4" fill="#7eb89a" opacity="0.25"/></svg>
-      <div style="position:absolute;inset:0;background:linear-gradient(to right, transparent 50%, #f8f9f7 100%);"></div>
+  <div class="ev-card" style="margin-top:24px;">
+    <div class="ev-card-img">
+      <img src="https://uk-power-connections.netlify.app/photo-ev.jpg" alt="EV Projects">
+      <div class="ev-card-img-overlay"></div>
     </div>
-    <div class="ev-banner-content">
-      <div class="section-label dark">EV Infrastructure</div>
-      <div class="ev-banner-title">EV Projects &amp; Installs</div>
-      <p class="ev-banner-desc">End-to-end EV charging infrastructure for local authorities and commercial sites. NERS-accredited, ICP-approved — no DNO delays.</p>
-      <a href="ev-projects.html" class="btn-primary" style="align-self:flex-start;">Enquire Now →</a>
+    <div class="ev-card-content">
+      <div class="section-label">EV Infrastructure</div>
+      <div class="ev-card-title">EV Projects &amp; Installs</div>
+      <p class="ev-card-desc">End-to-end EV charging infrastructure for local authorities and commercial sites. NERS-accredited, ICP-approved — no DNO delays.</p>
+      <a href="ev-projects.html" class="btn-outline-white">View EV Projects</a>
     </div>
   </div>
 </section>
 
 <!-- ICP BENEFITS -->
-<section id="icp-benefits" style="background:#f0f5f2;padding:100px 80px;">
-  <div class="section-label dark">ICP Advantage</div>
-  <h2 class="section-title dark">Tailored Solutions to<br>Power Your Project</h2>
+<section id="icp">
+  <div class="section-label">ICP Advantage</div>
+  <h2>Tailored Solutions to<br>Power Your Project</h2>
+  <p style="color:#666;font-size:15px;font-weight:300;line-height:1.75;max-width:540px;margin-top:8px;">Working with an Independent Connection Provider offers significant advantages over standard network operator routes.</p>
   <div class="icp-grid">
     <div class="icp-cards">
-      <div class="icp-card"><div class="icp-icon">⚡</div><div><div class="icp-card-title">Timely Connections</div><p>Typically much faster than going through a DNO directly — we self-connect, bypassing the queue entirely.</p></div></div>
-      <div class="icp-card"><div class="icp-icon">£</div><div><div class="icp-card-title">Cost-Effective Solutions</div><p>Rigorous value engineering and shorter timescales ensure the most efficient grid connections.</p></div></div>
-      <div class="icp-card"><div class="icp-icon">◎</div><div><div class="icp-card-title">Flexible Management</div><p>We handle every aspect of your connection, from design to non-contestable coordination.</p></div></div>
-      <div class="icp-card"><div class="icp-icon">◈</div><div><div class="icp-card-title">Innovative Design</div><p>Custom network designs using innovative techniques to meet unique project scopes.</p></div></div>
+      <div class="icp-card"><div class="icp-icon">⚡</div><div><div class="icp-card-title">Timely Connections</div><p>Typically much faster delivery than using a Distribution Network Operator (DNO) directly — we self-connect, bypassing the queue entirely.</p></div></div>
+      <div class="icp-card"><div class="icp-icon">£</div><div><div class="icp-card-title">Cost-Effective Solutions</div><p>Rigorous value engineering and shorter timescales ensure the most efficient grid connections — reducing both cost and programme risk.</p></div></div>
+      <div class="icp-card"><div class="icp-icon">◎</div><div><div class="icp-card-title">Flexible Management</div><p>We handle every aspect of your connection, from design to non-contestable coordination — adapting to your project's changing needs.</p></div></div>
+      <div class="icp-card"><div class="icp-icon">◈</div><div><div class="icp-card-title">Innovative Design</div><p>Custom network designs using innovative installation techniques to meet unique project scopes — engineered to your exact capacity requirements.</p></div></div>
     </div>
     <div class="icp-visual" id="icpVisual">
-      <svg viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;width:100%;height:100%;"><rect width="1400" height="900" fill="#0a1410"/><rect x="62" y="400" width="76" height="340" rx="6" fill="#0d1912" stroke="#192c1c" stroke-width="1.5"/><rect x="332" y="400" width="76" height="340" rx="6" fill="#0d1912" stroke="#192c1c" stroke-width="1.5"/><rect x="344" y="427" width="52" height="84" rx="2" fill="#7eb89a" opacity="0.2"/><circle cx="398" cy="420" r="13" fill="#7eb89a" opacity="0.18"/><rect x="482" y="558" width="338" height="178" rx="13" fill="#141e18"/><circle cx="548" cy="736" r="38" fill="#070c08"/><circle cx="702" cy="736" r="38" fill="#070c08"/></svg>
-      <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(240,245,242,0.7) 0%, transparent 50%);"></div>
-      <div class="icp-stat-box">
+      <img src="https://uk-power-connections.netlify.app/photo-04.png" alt="Substation Works" onerror="this.src='https://uk-power-connections.netlify.app/photo-01.png'">
+      <div class="icp-visual-overlay"></div>
+      <div class="icp-stat">
         <div class="icp-stat-num">500+</div>
         <div class="icp-stat-label">Connections Delivered</div>
       </div>
@@ -432,15 +298,16 @@ footer{background:#080808;border-top:1px solid rgba(255,255,255,0.07);padding:64
 </section>
 
 <!-- ABOUT -->
-<section id="about" style="display:grid;grid-template-columns:1fr 1.1fr;min-height:620px;overflow:hidden;padding:0;background:#f0f5f2;">
-  <div class="about-visual">
-    <img src="https://uk-power-connections.netlify.app/ryan-brady.png" alt="Ryan Brady" onerror="this.style.display='none'">
-    <div class="about-visual-overlay"></div>
+<section id="about" style="padding:0;">
+  <div class="about-img">
+    <img src="https://uk-power-connections.netlify.app/ryan-brady.png" alt="Ryan Brady — Owner &amp; Lead Engineer">
+    <div class="about-img-overlay"></div>
   </div>
   <div class="about-content">
-    <div class="section-label dark">Meet the Owner</div>
-    <h2 class="section-title dark" style="margin-bottom:16px;">Experience<br>You Can Trust</h2>
-    <p style="color:rgba(20,35,20,0.65);font-size:15px;font-weight:300;line-height:1.8;max-width:420px;margin-bottom:8px;">Led by Ryan Brady, a NERS-accredited specialist with over a decade of hands-on experience in the UK power sector.</p>
+    <div class="section-label">Meet the Owner</div>
+    <h2>Experience You<br>Can Trust</h2>
+    <p>Led by Ryan Brady, a NERS-accredited specialist with over a decade of hands-on experience in the UK power sector.</p>
+    <p style="margin-top:8px;">Ryan has spent 10 years delivering complex electrical infrastructure projects, from residential phased energisation to major industrial upgrades.</p>
     <div class="about-quote">"Our mission is to simplify the connection process through direct accountability and technical excellence."</div>
     <div class="about-name">Ryan Brady</div>
     <div class="about-role">Owner &amp; Lead Engineer</div>
@@ -453,59 +320,55 @@ footer{background:#080808;border-top:1px solid rgba(255,255,255,0.07);padding:64
 </section>
 
 <!-- PORTFOLIO -->
-<section id="portfolio" style="padding:100px 80px 0;background:#fff;">
+<section id="portfolio">
   <div class="portfolio-head">
     <div>
-      <div class="section-label dark">Work Done</div>
-      <h2 class="section-title dark">Recent On-Site Delivery</h2>
+      <div class="section-label">Work Done</div>
+      <h2>Recent On-Site Delivery</h2>
+      <p style="color:#666;font-size:14px;margin-top:8px;">A look at our technical standards across infrastructure, electrical jointing and civil engineering.</p>
     </div>
     <div class="filter-tabs">
-      <button class="filter-tab active" onclick="filterPortfolio('all',this)">All</button>
-      <button class="filter-tab" onclick="filterPortfolio('infrastructure',this)">Infrastructure</button>
-      <button class="filter-tab" onclick="filterPortfolio('civil',this)">Civil</button>
-      <button class="filter-tab" onclick="filterPortfolio('electrical',this)">Electrical</button>
+      <button class="filter-tab active" onclick="filterP('all',this)">All</button>
+      <button class="filter-tab" onclick="filterP('infrastructure',this)">Infrastructure</button>
+      <button class="filter-tab" onclick="filterP('civil',this)">Civil Engineering</button>
+      <button class="filter-tab" onclick="filterP('electrical',this)">Electrical</button>
     </div>
   </div>
-  <div class="portfolio-grid" id="portfolioGrid">
-    <div class="p-item" data-cat="infrastructure"><svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg"><rect width="800" height="500" fill="#0e1a0e"/><rect x="100" y="200" width="600" height="200" fill="#060606"/><rect x="150" y="220" width="30" height="160" rx="3" fill="#1a3020"/><rect x="250" y="220" width="30" height="160" rx="3" fill="#1a3020"/><rect x="350" y="220" width="30" height="160" rx="3" fill="#7eb89a" opacity="0.2"/></svg><div class="p-overlay"><div><div class="p-cat">Infrastructure</div><div class="p-name">Large Scale Duct Installation</div></div></div></div>
-    <div class="p-item" data-cat="electrical"><svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg"><rect width="800" height="500" fill="#0e0e1a"/><path d="M0,250 Q200,220 400,250 Q600,280 800,250" fill="none" stroke="#7eb89a" stroke-width="8" opacity="0.4"/><path d="M0,270 Q200,240 400,270 Q600,300 800,270" fill="none" stroke="#7eb89a" stroke-width="6" opacity="0.3"/><circle cx="400" cy="250" r="20" fill="#7eb89a" opacity="0.3"/></svg><div class="p-overlay"><div><div class="p-cat">Electrical</div><div class="p-name">LV Cable Laying</div></div></div></div>
-    <div class="p-item" data-cat="electrical"><svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg"><rect width="800" height="500" fill="#1a0e0e"/><circle cx="400" cy="250" r="80" fill="none" stroke="#7eb89a" stroke-width="3" opacity="0.4"/><circle cx="400" cy="250" r="40" fill="#7eb89a" opacity="0.15"/><line x1="320" y1="250" x2="480" y2="250" stroke="#7eb89a" stroke-width="3" opacity="0.5"/></svg><div class="p-overlay"><div><div class="p-cat">Electrical</div><div class="p-name">HV Cable Jointing</div></div></div></div>
-    <div class="p-item" data-cat="infrastructure"><svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg"><rect width="800" height="500" fill="#1a1a0e"/><rect x="200" y="100" width="400" height="300" fill="#111"/><rect x="240" y="140" width="80" height="120" fill="#0a0a0a" stroke="#7eb89a" stroke-width="1" opacity="0.5"/><rect x="360" y="140" width="80" height="120" fill="#0a0a0a" stroke="#7eb89a" stroke-width="1" opacity="0.5"/></svg><div class="p-overlay"><div><div class="p-cat">Infrastructure</div><div class="p-name">Substation Excavation</div></div></div></div>
-    <div class="p-item" data-cat="civil"><svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg"><rect width="800" height="500" fill="#0e0e0e"/><rect x="100" y="200" width="600" height="180" fill="#0a0a0a"/><rect x="120" y="220" width="560" height="20" fill="#7eb89a" opacity="0.15"/><rect x="120" y="260" width="560" height="20" fill="#7eb89a" opacity="0.1"/></svg><div class="p-overlay"><div><div class="p-cat">Civil Engineering</div><div class="p-name">Urban Duct Installation</div></div></div></div>
-    <div class="p-item" data-cat="civil"><svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg"><rect width="800" height="500" fill="#0e1a0e"/><rect x="0" y="300" width="800" height="200" fill="#0a1a0a"/><path d="M0,300 Q400,280 800,300" fill="#1a2a1a" stroke="#7eb89a" stroke-width="1" opacity="0.3"/></svg><div class="p-overlay"><div><div class="p-cat">Civil Engineering</div><div class="p-name">Trench Backfill</div></div></div></div>
-    <div class="p-item" data-cat="civil"><svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg"><rect width="800" height="500" fill="#0e0e0e"/><line x1="0" y1="250" x2="800" y2="250" stroke="#7eb89a" stroke-width="2" opacity="0.3"/><rect x="200" y="200" width="400" height="100" fill="#0a0a0a"/><circle cx="400" cy="250" r="15" fill="#7eb89a" opacity="0.4"/></svg><div class="p-overlay"><div><div class="p-cat">Civil Engineering</div><div class="p-name">Cable Route Preparation</div></div></div></div>
-    <div class="p-item" data-cat="infrastructure"><svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg"><rect width="800" height="500" fill="#0a1410"/><rect x="150" y="100" width="500" height="350" fill="#0d1912" stroke="#192c1c" stroke-width="2"/><rect x="200" y="150" width="150" height="200" fill="#070d09" stroke="#7eb89a" stroke-width="1" opacity="0.4"/><rect x="400" y="150" width="150" height="200" fill="#070d09" stroke="#7eb89a" stroke-width="1" opacity="0.4"/></svg><div class="p-overlay"><div><div class="p-cat">Infrastructure</div><div class="p-name">Grid Substation Works</div></div></div></div>
-    <div class="p-item" data-cat="civil"><svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg"><rect width="800" height="500" fill="#1a1a0e"/><rect x="200" y="150" width="400" height="350" fill="#0a0a08"/><path d="M200,150 L400,50 L600,150" fill="#111" stroke="#7eb89a" stroke-width="1" opacity="0.3"/></svg><div class="p-overlay"><div><div class="p-cat">Civil Engineering</div><div class="p-name">Excavation Works</div></div></div></div>
-    <div class="p-item" data-cat="electrical"><svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg"><rect width="800" height="500" fill="#0e0e1a"/><circle cx="400" cy="250" r="100" fill="none" stroke="#7eb89a" stroke-width="2" opacity="0.3" stroke-dasharray="10 5"/><circle cx="400" cy="250" r="50" fill="#7eb89a" opacity="0.1"/><circle cx="400" cy="250" r="15" fill="#7eb89a" opacity="0.5"/></svg><div class="p-overlay"><div><div class="p-cat">Electrical</div><div class="p-name">Cable Joint Installation</div></div></div></div>
-    <div class="p-item" data-cat="electrical"><svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg"><rect width="800" height="500" fill="#1a0e0e"/><path d="M100,250 C200,150 300,350 400,250 C500,150 600,350 700,250" fill="none" stroke="#7eb89a" stroke-width="3" opacity="0.5"/><path d="M100,280 C200,180 300,380 400,280 C500,180 600,380 700,280" fill="none" stroke="#7eb89a" stroke-width="2" opacity="0.3"/></svg><div class="p-overlay"><div><div class="p-cat">Electrical</div><div class="p-name">LV Joint &amp; Termination</div></div></div></div>
-    <div class="p-item" data-cat="infrastructure"><svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg"><rect width="800" height="500" fill="#0e0e0e"/><circle cx="400" cy="300" r="150" fill="none" stroke="#7eb89a" stroke-width="20" opacity="0.2"/><circle cx="400" cy="300" r="100" fill="none" stroke="#7eb89a" stroke-width="15" opacity="0.15"/><circle cx="400" cy="300" r="50" fill="#7eb89a" opacity="0.1"/></svg><div class="p-overlay"><div><div class="p-cat">Infrastructure</div><div class="p-name">HV Cable Drum Deployment</div></div></div></div>
+  <div class="portfolio-grid" id="pgrid">
+    <div class="p-item" data-cat="infrastructure"><img src="https://uk-power-connections.netlify.app/photo-01.png" alt="Large Scale Duct Installation" onerror="this.parentElement.style.background='#0d1a12'"><div class="p-overlay"><div><div class="p-cat">Infrastructure</div><div class="p-name">Large Scale Duct Installation</div></div></div></div>
+    <div class="p-item" data-cat="electrical"><img src="https://uk-power-connections.netlify.app/photo-02.png" alt="LV Cable Laying" onerror="this.parentElement.style.background='#0d1a12'"><div class="p-overlay"><div><div class="p-cat">Electrical</div><div class="p-name">LV Cable Laying</div></div></div></div>
+    <div class="p-item" data-cat="electrical"><img src="https://uk-power-connections.netlify.app/photo-03.png" alt="HV Cable Jointing" onerror="this.parentElement.style.background='#0d1a12'"><div class="p-overlay"><div><div class="p-cat">Electrical</div><div class="p-name">HV Cable Jointing</div></div></div></div>
+    <div class="p-item" data-cat="infrastructure"><img src="https://uk-power-connections.netlify.app/photo-04.png" alt="Substation Excavation Works" onerror="this.parentElement.style.background='#0d1a12'"><div class="p-overlay"><div><div class="p-cat">Infrastructure</div><div class="p-name">Substation Excavation Works</div></div></div></div>
+    <div class="p-item" data-cat="civil"><img src="https://uk-power-connections.netlify.app/photo-05.png" alt="Urban Duct Installation" onerror="this.parentElement.style.background='#0d1a12'"><div class="p-overlay"><div><div class="p-cat">Civil Engineering</div><div class="p-name">Urban Duct Installation</div></div></div></div>
+    <div class="p-item" data-cat="civil"><img src="https://uk-power-connections.netlify.app/photo-06.png" alt="Trench Backfill" onerror="this.parentElement.style.background='#0d1a12'"><div class="p-overlay"><div><div class="p-cat">Civil Engineering</div><div class="p-name">Trench Backfill &amp; Reinstatement</div></div></div></div>
+    <div class="p-item" data-cat="civil"><img src="https://uk-power-connections.netlify.app/photo-07.png" alt="Cable Route Preparation" onerror="this.parentElement.style.background='#0d1a12'"><div class="p-overlay"><div><div class="p-cat">Civil Engineering</div><div class="p-name">Cable Route Preparation</div></div></div></div>
+    <div class="p-item" data-cat="infrastructure"><img src="https://uk-power-connections.netlify.app/photo-08.png" alt="Grid Substation Civil Works" onerror="this.parentElement.style.background='#0d1a12'"><div class="p-overlay"><div><div class="p-cat">Infrastructure</div><div class="p-name">Grid Substation Civil Works</div></div></div></div>
+    <div class="p-item" data-cat="civil"><img src="https://uk-power-connections.netlify.app/photo-09.png" alt="Excavation &amp; Breaking Out" onerror="this.parentElement.style.background='#0d1a12'"><div class="p-overlay"><div><div class="p-cat">Civil Engineering</div><div class="p-name">Excavation &amp; Breaking Out</div></div></div></div>
+    <div class="p-item" data-cat="electrical"><img src="https://uk-power-connections.netlify.app/photo-10.png" alt="Cable Joint Installation" onerror="this.parentElement.style.background='#0d1a12'"><div class="p-overlay"><div><div class="p-cat">Electrical</div><div class="p-name">Cable Joint Installation</div></div></div></div>
+    <div class="p-item" data-cat="electrical"><img src="https://uk-power-connections.netlify.app/photo-11.png" alt="LV Joint &amp; Termination" onerror="this.parentElement.style.background='#0d1a12'"><div class="p-overlay"><div><div class="p-cat">Electrical</div><div class="p-name">LV Joint &amp; Termination</div></div></div></div>
+    <div class="p-item" data-cat="electrical"><img src="https://uk-power-connections.netlify.app/photo-hv-joint.png" alt="HV Joint Works" onerror="this.parentElement.style.background='#0d1a12'"><div class="p-overlay"><div><div class="p-cat">Electrical</div><div class="p-name">HV Joint Works</div></div></div></div>
+    <div class="p-item" data-cat="infrastructure"><img src="https://uk-power-connections.netlify.app/photo-12.png" alt="HV Cable Drum Deployment" onerror="this.parentElement.style.background='#0d1a12'"><div class="p-overlay"><div><div class="p-cat">Infrastructure</div><div class="p-name">HV Cable Drum Deployment</div></div></div></div>
+    <div class="p-item" data-cat="electrical"><img src="https://uk-power-connections.netlify.app/photo-14.png" alt="Urban Cable Jointing" onerror="this.parentElement.style.background='#0d1a12'"><div class="p-overlay"><div><div class="p-cat">Electrical</div><div class="p-name">Urban Cable Jointing</div></div></div></div>
   </div>
 </section>
 
 <!-- EV CTA -->
 <div class="ev-cta">
-  <div class="ev-cta-bg">
-    <svg viewBox="0 0 1400 400" xmlns="http://www.w3.org/2000/svg"><rect width="1400" height="400" fill="#1a2e1a"/><rect x="80" y="60" width="60" height="240" rx="4" fill="#0e1512" stroke="#1a2e20" stroke-width="1"/><rect x="290" y="60" width="60" height="240" rx="4" fill="#0e1512" stroke="#1a2e20" stroke-width="1"/><rect x="300" y="87" width="40" height="60" rx="2" fill="#7eb89a" opacity="0.18"/><rect x="500" y="80" width="200" height="160" rx="10" fill="#0d0d0d" stroke="#7eb89a" stroke-width="0.5" opacity="0.3"/></svg>
+  <div>
+    <h2 style="color:#fff;margin-bottom:16px;">Specialised EV Charging Infrastructure</h2>
+    <p class="ev-cta-desc">Working with local authorities on large-scale EV rollouts? Visit our dedicated EV Projects page for end-to-end charging infrastructure delivery.</p>
   </div>
-  <div class="ev-cta-overlay"></div>
-  <div class="ev-cta-inner">
-    <div>
-      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#7eb89a;margin-bottom:14px;">EV Infrastructure</div>
-      <div class="ev-cta-title">Specialised EV Charging Infrastructure</div>
-      <p class="ev-cta-desc">Working with local authorities on large-scale EV rollouts? End-to-end charging infrastructure delivery — NERS-accredited, ICP-approved, no DNO delays.</p>
-    </div>
-    <a href="ev-projects.html" class="btn-ev">
-      View EV Projects
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#080808" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-    </a>
-  </div>
+  <a href="ev-projects.html" class="btn-ev">
+    View EV Projects
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+  </a>
 </div>
 
 <!-- CONTACT -->
-<section id="contact" style="background:#111;padding:100px 80px;">
-  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:#7eb89a;margin-bottom:14px;">Contact Us</div>
-  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(34px,4vw,56px);line-height:1;margin-bottom:10px;">Timely Connections<br>with Confidence</h2>
-  <p style="color:rgba(237,233,227,0.45);font-size:15px;font-weight:300;line-height:1.8;max-width:440px;margin-bottom:48px;">Acting as your intermediary between the DNO and your project to ensure a smooth, cost-effective power supply.</p>
+<section id="contact">
+  <div class="section-label">Contact Us</div>
+  <h2>Timely Connections<br>with Confidence</h2>
+  <p style="color:#666;font-size:15px;font-weight:300;line-height:1.75;max-width:440px;margin-top:8px;">Acting as your intermediary between the DNO and your project to ensure a smooth, cost-effective power supply.</p>
   <div class="contact-grid">
     <div>
       <div class="contact-item"><div class="contact-icon">📞</div><div><div class="ci-label">Phone Support</div><a href="tel:01727229040" class="ci-val">01727 229040</a></div></div>
@@ -521,7 +384,7 @@ footer{background:#080808;border-top:1px solid rgba(255,255,255,0.07);padding:64
         <select class="form-select" required><option value="">Select a service...</option><option>ICP / New Connection</option><option>Contestable Works</option><option>ICP / IDNO Coordination</option><option>EV Charging Infrastructure</option><option>Project Management</option><option>Other / Not Sure</option></select>
       </div>
       <div class="form-group"><label class="form-label">Project Details</label><textarea class="form-textarea" placeholder="Tell us about your project..." required></textarea></div>
-      <button type="submit" class="btn-submit" id="submitBtn">Start My Project →</button>
+      <button type="submit" class="btn-submit" id="submitBtn">Start My Project</button>
     </form>
   </div>
 </section>
@@ -530,11 +393,11 @@ footer{background:#080808;border-top:1px solid rgba(255,255,255,0.07);padding:64
 <footer>
   <div class="footer-grid">
     <div>
-      <div class="footer-logo">UK <span>POWER</span> CONNECTIONS</div>
+      <div class="footer-logo">UK <span>POWER</span>CONNECTIONS</div>
       <p class="footer-tagline">NERS-accredited Independent Connection Provider delivering new electrical connections across the UK.</p>
       <div class="footer-contact">
-        <div>4-6 Spicer Street, St Albans, Hertfordshire, AL3 4PQ</div>
         <a href="tel:01727229040">01727 229040</a>
+        <div>4-6 Spicer Street, St Albans, Hertfordshire, AL3 4PQ</div>
         <a href="mailto:projects@ukpowerconnections.com">projects@ukpowerconnections.com</a>
       </div>
     </div>
@@ -544,7 +407,7 @@ footer{background:#080808;border-top:1px solid rgba(255,255,255,0.07);padding:64
     </div>
     <div>
       <div class="footer-col-title">Company</div>
-      <ul class="footer-links"><li><a href="#about">About Ryan Brady</a></li><li><a href="#icp-benefits">ICP Benefits</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#contact">Contact</a></li></ul>
+      <ul class="footer-links"><li><a href="#about">About Ryan Brady</a></li><li><a href="#icp">ICP Benefits</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#contact">Contact</a></li></ul>
     </div>
   </div>
   <div class="footer-bottom">
@@ -554,55 +417,29 @@ footer{background:#080808;border-top:1px solid rgba(255,255,255,0.07);padding:64
 </footer>
 
 <script>
-// Nav scroll
-window.addEventListener('scroll', () => {
-  document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 40);
-});
-
-// Mobile nav
-const isMobile = () => window.innerWidth < 768;
-window.addEventListener('resize', () => {
-  document.getElementById('navLinks').style.display = isMobile() ? 'none' : 'flex';
-  document.getElementById('navMobile').style.display = isMobile() ? 'block' : 'none';
-  document.getElementById('heroBadges').style.display = isMobile() ? 'none' : 'flex';
-  document.getElementById('icpVisual').style.display = isMobile() ? 'none' : 'block';
-});
-if (isMobile()) {
-  document.getElementById('navLinks').style.display = 'none';
-  document.getElementById('heroBadges').style.display = 'none';
-  document.getElementById('icpVisual').style.display = 'none';
-} else {
-  document.getElementById('navMobile').style.display = 'none';
+window.addEventListener('scroll',()=>{document.getElementById('mainNav').classList.toggle('scrolled',window.scrollY>40);});
+const isMobile=()=>window.innerWidth<768;
+function checkMobile(){
+  document.getElementById('navLinks').style.display=isMobile()?'none':'flex';
+  document.getElementById('navMobile').style.display=isMobile()?'block':'none';
+  if(document.getElementById('icpVisual'))document.getElementById('icpVisual').style.display=isMobile()?'none':'block';
 }
-
-// Portfolio filter
-function filterPortfolio(cat, btn) {
-  document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+checkMobile();
+window.addEventListener('resize',checkMobile);
+function filterP(cat,btn){
+  document.querySelectorAll('.filter-tab').forEach(t=>t.classList.remove('active'));
   btn.classList.add('active');
-  document.querySelectorAll('.p-item').forEach(item => {
-    item.style.display = (cat === 'all' || item.dataset.cat === cat) ? 'block' : 'none';
+  document.querySelectorAll('.p-item').forEach(item=>{
+    item.style.display=(cat==='all'||item.dataset.cat===cat)?'block':'none';
   });
 }
-
-// Contact form
-document.getElementById('contactForm').addEventListener('submit', function(e) {
+document.getElementById('contactForm').addEventListener('submit',function(e){
   e.preventDefault();
-  const btn = document.getElementById('submitBtn');
-  btn.textContent = 'Message Sent ✓';
-  btn.style.background = '#1a6e42';
-  btn.style.color = '#fff';
-  setTimeout(() => {
-    btn.textContent = 'Start My Project →';
-    btn.style.background = '';
-    btn.style.color = '';
-    this.reset();
-  }, 3000);
+  const btn=document.getElementById('submitBtn');
+  btn.textContent='Message Sent ✓';
+  btn.style.background='#2a7a4a';
+  setTimeout(()=>{btn.textContent='Start My Project';btn.style.background='';this.reset();},3000);
 });
-
-// Reveal on scroll
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => { if(e.isIntersecting) e.target.style.opacity = '1'; });
-}, {threshold: 0.1});
 </script>
 </body>
 </html>
